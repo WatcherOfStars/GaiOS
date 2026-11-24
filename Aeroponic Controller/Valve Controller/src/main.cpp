@@ -19,7 +19,7 @@ float last_message_time = 0;
 
 //==============AEROPONICS VARS==============
 float flow_on_time = 15; //seconds
-float flow_off_time = 15; //seconds should be 300
+float flow_off_time = 300; //seconds should be 300
 float last_change_time = 0;
 bool flow_state;
 int flow_test_pin = 10; //example pin number for testing

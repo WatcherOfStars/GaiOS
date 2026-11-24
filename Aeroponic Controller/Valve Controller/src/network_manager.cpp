@@ -33,6 +33,7 @@ void setup_wifi() {
 
   client.setServer(HOST, PORT);
   client.setCallback(callback);
+  client.setBufferSize(MQTT_TX_BUFSIZE);
   //client.subscribe(TOPIC);
 
   addText("WIFI_STATE", "Connected!", GREEN);
@@ -66,7 +67,7 @@ void reconnect() {
     Serial.print("Attempting MQTT connection...");
     addText("WIFI_STATE", "Connecting to MQTT...", ORANGE);
     // Attempt to connect
-    if (client.connect(CLIENT_ID)) {
+    if (client.connect(CLIENT_ID, USERNAME, PASSWORD)) {
       Serial.println("connected");
       // Subscribe
       //client.subscribe(TOPIC);
@@ -86,4 +87,3 @@ void reconnect() {
 void publishToMQTT(const char* topic, const char* message){
   client.publish(topic,message);
 }
-

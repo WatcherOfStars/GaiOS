@@ -7,7 +7,9 @@
 #define MQTT_RX_BUFSIZE   1024
 
 // ====================================================== //"10.1.99.175"
-#define HOST              "192.168.1.167"
+#define HOST              "8.234.190.242"
+#define USERNAME         "solarpv"
+#define PASSWORD         "solarpv123"
 #define PORT              1883
 #define CLIENT_ID       "ReserviourController"
 // ======================================================
